@@ -6,5 +6,5 @@ cd dist
 git init
 git add -A
 git commit -m "deploy"
-git push --set-upstream git@github.com:MartijnCBV/INNO-Prototype gh-pages
+git push -f git@github.com:MartijnCBV/INNO-Prototype master:gh-pages
 cd -
