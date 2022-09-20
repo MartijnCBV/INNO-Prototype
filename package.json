@@ -5,7 +5,7 @@
     "build": "run-p type-check build-only",
     "test:unit": "vitest --environment jsdom",
     "deploy": "sh deploy.sh",
-    "build-only": "vite build",
+    "build-only": "vite build --base=./",
     "dev": "vite",
     "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
     "preview": "vite preview --port 4173",
