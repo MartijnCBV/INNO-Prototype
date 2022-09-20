@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+    width: auto;
+    height: 52px;
+    margin-top: 26px;
+    margin-bottom: 27px;
+}
+
+.mw {
+    max-width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-icon {
+    font-size: 36px !important;
+}
