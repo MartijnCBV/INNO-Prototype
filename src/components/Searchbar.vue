@@ -1,9 +1,9 @@
 <template>
   <div class="mw">
-    <h1 class="text-white text-3xl font-bold pt-10 pb-5">
+    <h1 class="text-white text-3xl font-bold pt-10">
       <span class="bg-c-brown p-7 mx-7 inline-block max-w-s">Zoek in databronnen</span>
     </h1>
-    <form>
+    <form class="mt-[32px]">
       <label for="searchbar" class="hidden">Zoek in databronnen</label>
       <div class="float-left h-[68px]">
         <input id="searchbar" type="text" placeholder="Zoek in databronnen"
