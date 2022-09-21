@@ -1,10 +1,10 @@
 <template>
   <div class="mw">
     <h1 class="text-white text-3xl font-bold pt-10">
-      <span class="bg-c-brown p-7 mx-7 inline-block max-w-s">Zoek in databronnen</span>
+      <span class="bg-c-brown p-7 mx-7 inline-block max-w-s">Zoek in data</span>
     </h1>
-    <form class="mt-[32px]">
-      <label for="searchbar" class="hidden">Zoek in databronnen</label>
+    <form class="mt-[32px]" @submit.prevent="onSubmit()">
+      <label for="searchbar" class="hidden">Zoek in data</label>
       <div class="w-full h-full max-w-fit">
         <input id="searchbar" type="text" placeholder="Zoek in databronnen"
                class="w-[484px] ml-7 px-7 py-5 text-xl border-transparent focus:border-transparent focus:ring-0 float-left">
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name: "Searchbar"
+  name: "Searchbar",
+  methods: {
+    onSubmit() {
+      location.href = "/#/search"
+    }
+  }
 }
 </script>
 
