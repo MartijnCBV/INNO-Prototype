@@ -5,11 +5,11 @@
     </h1>
     <form class="mt-[32px]">
       <label for="searchbar" class="hidden">Zoek in databronnen</label>
-      <div class="float-left h-[68px]">
+      <div class="w-full h-full max-w-fit">
         <input id="searchbar" type="text" placeholder="Zoek in databronnen"
-               class="w-[484px] ml-7 px-7 py-5 text-xl border-transparent focus:border-transparent focus:ring-0">
-        <button type="submit" class="bg-c-red">
-          <i class="material-icons text-white search-icon px-[18px] py-[18px]">search</i>
+               class="w-[484px] ml-7 px-7 py-5 text-xl border-transparent focus:border-transparent focus:ring-0 float-left">
+        <button type="submit" class="bg-c-red float-right border border-c-red">
+          <i class="material-icons text-white search-icon p-[15px]">search</i>
         </button>
       </div>
     </form>

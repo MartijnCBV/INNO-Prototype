@@ -1,7 +1,7 @@
 <template>
   <app-header></app-header>
   <main>
-    <div class="bg-[url('/src/assets/bg-building.svg')] bg-contain bg-no-repeat w-full h-0 pb-[31.95%]">
+    <div class="bg-[url('/src/assets/bg-building.svg')] bg-cover bg-no-repeat w-full h-[440px]">
       <searchbar></searchbar>
     </div>
   </main>
