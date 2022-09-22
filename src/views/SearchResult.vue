@@ -1,16 +1,20 @@
 <template>
   <AppHeader></AppHeader>
   <SearchbarBar></SearchbarBar>
-  <search-result-filter></search-result-filter>
+  <div class="grid grid-cols-7 mw">
+    <search-result-filter class="col-span-2"></search-result-filter>
+    <search-result-container class="col-span-4"></search-result-container>
+  </div>
 </template>
 
 <script>
 import AppHeader from "/src/components/AppHeader.vue";
 import SearchbarBar from "/src/components/SearchbarBar.vue";
 import SearchResultFilter from "/src/components/SearchResultFilter.vue";
+import SearchResultContainer from "/src/components/SearchResultContainer.vue";
 export default {
 name: "SearchResult",
-  components: {SearchResultFilter, SearchbarBar, AppHeader}
+  components: {SearchResultContainer, SearchResultFilter, SearchbarBar, AppHeader}
 }
 </script>
 

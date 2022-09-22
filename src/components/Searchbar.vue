@@ -17,10 +17,17 @@
 </template>
 
 <script>
+import {Store} from "/src/stores/store";
+
 export default {
   name: "Searchbar",
   methods: {
     onSubmit() {
+      const store = Store();
+      console.log(store.getCurrentQuery())
+      console.log(document.getElementById("searchbar").value)
+      store.setCurrentQuery({content: document.getElementById("searchbar").value})
+      console.log(store.getCurrentQuery())
       location.href = process.env.NODE_ENV === 'production'
           ? '/INNO-Prototype/#/Search'
           : '/#/Search';

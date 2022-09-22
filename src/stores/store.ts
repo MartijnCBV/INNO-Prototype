@@ -3,11 +3,13 @@ import type {Result} from "@/models/Result";
 import type {Theme} from "@/models/Theme";
 import type {Label} from "@/models/Label";
 import {defineStore} from "pinia";
+import type {Query} from "@/models/Query";
 
 export type RootState = {
     results: Result[],
     themes: Theme[],
-    labels: Label[]
+    labels: Label[],
+    currentQuery: Query
 }
 
 export const Store = defineStore({
@@ -15,7 +17,8 @@ export const Store = defineStore({
     state: () => ({
         results: [],
         themes: [],
-        labels: []
+        labels: [],
+        currentQuery: { content: "" }
     } as RootState),
     actions: {
         addResult(result: Result) {
@@ -56,6 +59,12 @@ export const Store = defineStore({
         },
         getLabels() {
             return this.labels;
+        },
+        setCurrentQuery(query: Query) {
+            this.currentQuery = query
+        },
+        getCurrentQuery() {
+            return this.currentQuery
         }
     }
 })

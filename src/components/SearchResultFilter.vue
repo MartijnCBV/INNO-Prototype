@@ -1,5 +1,5 @@
 <template>
-  <div class="mw px-7 flex flex-col">
+  <div class="ml-7 pr-7 flex flex-col">
     <div class="pb-3">
       <button id="themeFilterBtn" type="button" @click="collapse('themeFilter', 'themeFilterBtn', 'Thema')"
               class="border-b border-c-grey w-[175px] text-justify">
