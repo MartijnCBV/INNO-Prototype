@@ -21,7 +21,9 @@ export default {
   name: "Searchbar",
   methods: {
     onSubmit() {
-      location.href = "/#/search";
+      location.href = process.env.NODE_ENV === 'production'
+          ? '/Search'
+          : '/#/Search';
     }
   }
 }
