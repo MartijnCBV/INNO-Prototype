@@ -2,7 +2,7 @@
   <div class="mw px-7 flex flex-col">
     <div class="pb-3">
       <button id="themeFilterBtn" type="button" @click="collapse('themeFilter', 'themeFilterBtn', 'Thema')"
-              class="border-b border-c-grey w-1/5 text-justify">
+              class="border-b border-c-grey w-[175px] text-justify">
         <i class="material-icons text-c-red filter-icon p-[2px] bg-c-grey">remove</i>
         <span class="pl-3 text-xl">Thema</span>
       </button>
@@ -16,7 +16,7 @@
 
     <div class="pb-3">
       <button id="labelFilterBtn" type="button" @click="collapse('labelFilter', 'labelFilterBtn', 'Label')"
-              class="border-b border-c-grey w-1/5 text-justify">
+              class="border-b border-c-grey w-[175px] text-justify">
         <i class="material-icons text-c-red filter-icon p-[2px] bg-c-grey">remove</i>
         <span class="pl-3 text-xl">Label</span>
       </button>
