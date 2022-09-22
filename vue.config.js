@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '/INNO-Prototype/'
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/INNO-Prototype/'
+        : '/'
 }
