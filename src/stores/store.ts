@@ -25,12 +25,12 @@ export const Store = defineStore({
             if (!result || this.results.includes(result)) return;
             this.results.push(result);
         },
-        removeResult(id: bigint) {
+        removeResult(id: number) {
             const i = this.getResult(id);
             if (i === -1) return;
             this.results.splice(i, 1);
         },
-        getResult(id: bigint) {
+        getResult(id: number) {
             return this.results.findIndex((i) => i.id === id);
         },
         getResults() {

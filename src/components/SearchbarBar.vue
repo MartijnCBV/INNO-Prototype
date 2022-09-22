@@ -20,12 +20,16 @@
 
 <script>
 import {Store} from "/src/stores/store";
+import {ref} from "vue";
+import * as vm from "vm";
+
+let currentQuery = ref();
 
 export default {
   name: "SearchbarBar",
   setup() {
     const store = Store();
-    let currentQuery = store.getCurrentQuery().content;
+    currentQuery.value = store.getCurrentQuery().content;
 
     return {
       currentQuery
@@ -35,6 +39,7 @@ export default {
     onSubmit() {
       const store = Store();
       store.setCurrentQuery({content: document.getElementById("searchbar").value})
+      currentQuery = store.getCurrentQuery().content;
       location.href = process.env.NODE_ENV === 'production'
           ? '/INNO-Prototype/#/Search'
           : '/#/Search';

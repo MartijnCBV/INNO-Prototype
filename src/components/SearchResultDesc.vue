@@ -1,10 +1,39 @@
 <template>
-
+  <div class="border-b border-c-grey border-solid grid grid-cols-5">
+    <div v-html="decideType(result.type)" class="row-span-2"></div>
+    <span class="text-2xl col-span-4">{{ result.name }}</span>
+    <span class="col-span-4">{{ result.shortDesc }}</span>
+    <div class="col-span-5 grid grid-cols-5 py-3">
+      <p v-for="theme in result.themes" class="bg-c-red text-white px-2 max-w-fit ml-7 rounded-xl">{{ theme.name }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
+import {ResultType} from "/src/models/Result";
+
 export default {
-  name: "SearchResultDesc"
+  name: "SearchResultDesc",
+  props: ["result"],
+  setup() {
+    function decideType(type) {
+      switch (type) {
+        case ResultType.FILE: {
+          return '<img src="/src/assets/file_icon.svg" alt="file icon"/>'
+        }
+        case ResultType.DATABASE: {
+          return '<img src="/src/assets/database_icon.svg" alt="database icon"/>'
+        }
+        case ResultType.INFOGRAPHIC: {
+          return '<img src="/src/assets/infographic_icon.svg" alt="infographic icon"/>'
+        }
+      }
+    }
+
+    return {
+      decideType
+    }
+  }
 }
 </script>
 
