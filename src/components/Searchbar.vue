@@ -22,7 +22,7 @@ export default {
   methods: {
     onSubmit() {
       location.href = process.env.NODE_ENV === 'production'
-          ? '/INNO-Prototype/Search'
+          ? '/INNO-Prototype/#/Search'
           : '/#/Search';
     }
   }
