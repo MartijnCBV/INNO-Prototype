@@ -21,7 +21,7 @@ export default {
   name: "Searchbar",
   methods: {
     onSubmit() {
-      location.href = process.env.NODE_ENV === 'production'? "/INNO-Prototype/#/search" : "/#/search";
+      location.href = "/#/search";
     }
   }
 }
