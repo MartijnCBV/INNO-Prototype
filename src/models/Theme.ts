@@ -1,4 +1,4 @@
 export interface Theme {
     name: string;
-    checked: string;
+    checked: boolean;
 }

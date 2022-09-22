@@ -8,23 +8,29 @@
       const store = Store();
 
       store.addTheme({
-        name: "Energie"
+        name: "Energie",
+        checked: false
       });
       store.addTheme({
-        name: "Wonen"
+        name: "Wonen",
+        checked: false
       });
       store.addTheme({
-        name: "Stikstof"
+        name: "Stikstof",
+        checked: false
       });
 
       store.addLabel({
-        name: "Rapport"
+        name: "Rapport",
+        checked: false
       });
       store.addLabel({
-        name: "Energieverbruik"
+        name: "Energieverbruik",
+        checked: false
       });
       store.addLabel({
-        name: "Zonnepanelen"
+        name: "Zonnepanelen",
+        checked: false
       });
     }
   })
