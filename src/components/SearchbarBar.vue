@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-c-grey w-full">
+  <div class="bg-c-grey w-full mb-3">
     <div class="mw grid grid-cols-5" >
       <h1 class="text-white text-2xl font-bold py-7">
         <span class="bg-c-brown px-7 py-[13px] mx-7 inline-block max-w-s">Resultaten</span>
