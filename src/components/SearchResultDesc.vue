@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b border-c-grey border-solid grid grid-cols-5">
+  <div class="border-b border-c-grey border-solid grid grid-cols-5" @click="openResult()">
     <div v-html="decideType(result.type)" class="row-span-3"></div>
     <span class="text-2xl col-span-4">{{ result.name }}</span>
     <span class="col-span-4">{{ result.shortDesc }}</span>
@@ -11,11 +11,14 @@
 
 <script>
 import {ResultType} from "/src/models/Result";
+import {Store} from "/src/stores/store";
 
 export default {
   name: "SearchResultDesc",
   props: ["result"],
-  setup() {
+  setup(props) {
+    const store = Store();
+
     function decideType(type) {
       switch (type) {
         case ResultType.FILE: {
@@ -30,8 +33,16 @@ export default {
       }
     }
 
+    function openResult() {
+      store.setCurrentResult(props.result);
+      location.href = process.env.NODE_ENV === 'production'
+        ? '/INNO-Prototype/#/Result'
+        : '/#/Result';
+    }
+
     return {
-      decideType
+      decideType,
+      openResult
     }
   }
 }

@@ -1,5 +1,6 @@
-import { reactive } from "vue";
 import type {Result} from "@/models/Result";
+// @ts-ignore
+import {ResultType} from "/src/models/Result";
 import type {Theme} from "@/models/Theme";
 import type {Label} from "@/models/Label";
 import {defineStore} from "pinia";
@@ -9,7 +10,8 @@ export type RootState = {
     results: Result[],
     themes: Theme[],
     labels: Label[],
-    currentQuery: Query
+    currentQuery: Query,
+    currentResult: Result
 }
 
 export const Store = defineStore({
@@ -18,7 +20,8 @@ export const Store = defineStore({
         results: [],
         themes: [],
         labels: [],
-        currentQuery: { content: "" }
+        currentQuery: { content: "" },
+        currentResult: { id: 0, name: "", shortDesc: "", longDesc: "", type: ResultType.FILE, labels: [], themes: []}
     } as RootState),
     actions: {
         addResult(result: Result) {
@@ -61,10 +64,16 @@ export const Store = defineStore({
             return this.labels;
         },
         setCurrentQuery(query: Query) {
-            this.currentQuery = query
+            this.currentQuery = query;
         },
         getCurrentQuery() {
-            return this.currentQuery
+            return this.currentQuery;
+        },
+        setCurrentResult(result: Result) {
+            this.currentResult = result;
+        },
+        getCurrentResult() {
+            return this.currentResult;
         }
     }
 })
