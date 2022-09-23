@@ -22,13 +22,13 @@ export default {
     function decideType(type) {
       switch (type) {
         case ResultType.FILE: {
-          return '<img src="/src/assets/file_icon.svg" alt="file icon" class="m-auto"/>'
+          return '<img src="https://raw.githubusercontent.com/MartijnCBV/INNO-Prototype/master/src/assets/file_icon.svg" alt="file icon" class="m-auto"/>'
         }
         case ResultType.DATABASE: {
-          return '<img src="/src/assets/database_icon.svg" alt="database icon" class="m-auto"/>'
+          return '<img src="https://raw.githubusercontent.com/MartijnCBV/INNO-Prototype/master/src/assets/database_icon.svg" alt="database icon" class="m-auto"/>'
         }
         case ResultType.INFOGRAPHIC: {
-          return '<img src="/src/assets/infographic_icon.svg" alt="infographic icon" class="m-auto"/>'
+          return '<img src="https://raw.githubusercontent.com/MartijnCBV/INNO-Prototype/master/src/assets/infographic_icon.svg" alt="infographic icon" class="m-auto"/>'
         }
       }
     }
